@@ -1,0 +1,42 @@
+research_task:
+  description: >
+    Conduct comprehensive research on energy regulations, standards, and best practices for {location}.
+    Focus on HVAC systems, lighting standards, occupancy comfort, and safety regulations for commercial
+    properties. Gather information from authoritative sources, including government agencies, industry
+    associations, and technical publications. Consider recent updates and upcoming changes in regulations.
+  expected_output: >
+    A detailed report containing:
+    1. Current energy regulations and standards for commercial properties
+    2. HVAC system requirements and specifications
+    3. Lighting standards and energy efficiency guidelines
+    4. Occupancy comfort parameters and safety regulations
+    5. Recent updates and upcoming changes in regulations
+    6. Sources and references for all information
+  agent: researcher
+
+database_organization_task:
+  description: >
+    Organize and structure the collected research data into a comprehensive database format.
+    Create appropriate categories, tags, and indexes for efficient data retrieval.
+    Implement a system for tracking data updates and maintaining version history.
+  expected_output: >
+    A structured database schema including:
+    1. Data categorization system
+    2. Tagging taxonomy
+    3. Search indexing strategy
+    4. Version tracking mechanism
+    5. Data update protocols
+  agent: database_manager
+
+quality_assurance_task:
+  description: >
+    Review and validate all data entries in the database for accuracy, consistency, and completeness.
+    Perform quality checks on new data additions and updates. Identify and document any discrepancies
+    or areas requiring additional verification.
+  expected_output: >
+    A quality assurance report including:
+    1. Data validation results
+    2. Identified discrepancies and resolutions
+    3. Recommendations for data quality improvements
+    4. Updated QA protocols and standards
+  agent: quality_assurance_specialist
