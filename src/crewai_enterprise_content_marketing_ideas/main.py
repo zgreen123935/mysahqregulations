@@ -10,8 +10,15 @@ def run():
     Run the crew.
     """
     inputs = {
-        "company": "Mysa HQ",
-        "location": "North America"  # Default location
+        "inputs": {
+            "company": "Mysa HQ",
+            "location": "North America"  # Default location
+        },
+        "taskWebhookUrl": "",  # Leave empty if not using webhooks
+        "stepWebhookUrl": "",  # Leave empty if not using webhooks
+        "crewWebhookUrl": "",  # Leave empty if not using webhooks
+        "trainingFilename": "",  # Leave empty if not training
+        "generateArtifact": False
     }
     MysaHQRegulationsCrew().crew().kickoff(inputs=inputs)
 
@@ -21,8 +28,15 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        "company": "Mysa HQ",
-        "location": "North America"
+        "inputs": {
+            "company": "Mysa HQ",
+            "location": "North America"
+        },
+        "taskWebhookUrl": "",
+        "stepWebhookUrl": "",
+        "crewWebhookUrl": "",
+        "trainingFilename": sys.argv[2],
+        "generateArtifact": False
     }
     try:
         MysaHQRegulationsCrew().crew().train(
@@ -49,8 +63,15 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        "company": "Mysa HQ",
-        "location": "North America"
+        "inputs": {
+            "company": "Mysa HQ",
+            "location": "North America"
+        },
+        "taskWebhookUrl": "",
+        "stepWebhookUrl": "",
+        "crewWebhookUrl": "",
+        "trainingFilename": "",
+        "generateArtifact": False
     }
     try:
         MysaHQRegulationsCrew().crew().test(
